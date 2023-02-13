@@ -8,7 +8,7 @@ class App {
     private function splitURL() 
     {
         $URL = $_GET['url'] ?? 'home';
-        $URL = explode("/", $URL);
+        $URL = explode("/", trim($URL,"/"));
         return $URL;
     }
 
@@ -20,6 +20,7 @@ class App {
         if(file_exists($filename)) {
             require $filename;
             $this->controller = ucfirst($URL[0]);
+            unset($URL[0]);
         } else {
 
             $filename = "../app/controllers/_404.php";
@@ -27,9 +28,18 @@ class App {
             $this->controller = "_404";
         }
 
-
         $controller = new $this->controller;
-        call_user_func_array([$controller,$this->method], []);
+
+        /** select method within the class */
+        if(!empty($URL[1])) {
+            
+            if(method_exists($controller, $URL[1])) {
+                $this->method = $URL[1];
+                unset($URL[1]);
+            }
+        }
+        show($URL);
+        call_user_func_array([$controller,$this->method], $URL);
     }
 
 }
