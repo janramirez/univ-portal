@@ -1,5 +1,6 @@
 <?php
 
+defined('ROOTPATH') OR exit('Access denied!');
 class _404 {
     use Controller;
 
