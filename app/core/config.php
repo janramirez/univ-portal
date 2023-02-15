@@ -10,7 +10,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost') {
     define('DBPASS','');
     define('DBDRIVER','');
 
-    define('ROOT', 'http://localhost/simple-php-framework/public');
+    define('ROOT', 'http://localhost/univ-portal/public');
 
 } else {
 
