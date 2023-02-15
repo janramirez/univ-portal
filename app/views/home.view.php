@@ -64,6 +64,30 @@
     <section class="bg-light px-5 pt-4 pb-5">
         <div class="container-fluid">
             <div class="grid row">
+
+            <?php
+              foreach($rows as $row) {
+                echo "<div class='col-lg-2 col-md-4 col-sm-6  mb-4 category-item student' data-category='student'><a href=".$row->url." target='_blank'><div class='card h-100'>
+                  <div class='card-body p-3 d-flex flex-column justify-content-between'>
+                      <div>
+                          <img src='".ROOT."/assets/images/".$row->icon_location."' class='w-25'/>
+
+                          <h6 class=' name mt-2 mb-1 text-semibold text-dkgold'><strong>".$row->name."</strong>
+                          </h6>
+                          <p class='mb-0 text-black'>".$row->description."
+                          </p>
+                      </div>
+
+                      <small class='text-muted'>
+                          <i class='fas fa-tag'></i>
+                          &nbsp;STUDENT
+                      </small>
+                  </div>
+              </div>
+            </a>
+        </div>";
+              }
+            ?>
               <div class="col-lg-2 col-md-4 col-sm-6  mb-4 category-item student" data-category="student">
                   <a href="https://mrooms.lpu.edu.ph/" target="_blank">
                     <div class="card h-100">

@@ -4,7 +4,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost') {
 
 
     // DATABASE CONFIGURATION
-    define('DBNAME','my_db');
+    define('DBNAME','my_portal');
     define('DBHOST','localhost');
     define('DBUSER','root');
     define('DBPASS','');
@@ -15,7 +15,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost') {
 } else {
 
     // DATABASE CONFIGURATION
-    define('DBNAME','my_db');
+    define('DBNAME','my_portal');
     define('DBHOST','localhost');
     define('DBUSER','root');
     define('DBPASS','');
