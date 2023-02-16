@@ -10,11 +10,13 @@ class Home {
 
         $data = [];
         $service = new Service;
+        $category = new Category;
 
-        $data['rows'] = $service->findAll();
+        $data['categories'] = $category->categories;
+        $data['services'] = $service->findAll();
 
-        $data['username'] = empty($_SESSION['USER']) ? 'Guest' : $_SESSION['USER']->email;
-        show($data);
+        $data['username'] = empty($_SESSION['USER']) ? 'Pirate' : $_SESSION['USER']->email;
+        // show($service->findAll());
         $this->view('home', $data);
     }
 
