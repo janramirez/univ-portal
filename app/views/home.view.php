@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThePORTLyceum - <?=$title?></title>
+  <title>LPU Manila - <?=$title?></title>
 
   <!-------------- GOOGLE FONTS LINKS --------------------->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,6 +108,116 @@
     </section>
 
       <!-- SERVICES SECTION start -->
+      <br><br><br><br><br><br>
+
+      <section class="mh-services" id="mh-services">
+        <div class="container">
+          <div class="row">
+            <div class="section-title col-sm-12">
+              <h3>Online Services</h3>
+            </div>
+            <br><br><br><br><br>
+            <div class="part col-sm-12">
+              <div class="services-nav col-sm-12" id="filter-button">
+                <ul>
+                  <li data-filter="*" class="current">
+                    <span>All Categories</span>
+                  </li>
+                  <li data-filter=".student">
+                    <span>Student</span>
+                  </li>
+                  <li data-filter=".alumni">
+                    <span>Alumni</span>
+                  </li>
+                  <li data-filter=".parent">
+                    <span>Parent</span>
+                  </li>
+                  <li data-filter=".faculty">
+                    <span>Faculty</span>
+                  </li>
+                  <li data-filter=".admin">
+                    <span>Admin Staff</span>
+                  </li>
+                  <li data-filter=".library">
+                    <span>Library</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mh-service-gallery col-sm-12" id="service-gallery">
+                <div class="serviceContainer row">
+                  <div class="grid-item col-md-4 student">
+                    <figure>
+                      <img src="<?=ROOT?>/assets/images/aims.png" alt="">
+                      <figcaption class="fig-caption">
+                        <i class="fas fa-search"></i>
+                        <h5 class="name">AIMS Portal</h5>
+                        <span class="sub-title">Student Portal</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="grid-item col-md-4 library student">
+                    <figure>
+                      <img src="<?=ROOT?>/assets/images/aims.png" alt="">
+                      <figcaption class="fig-caption">
+                        <i class="fas fa-search"></i>
+                        <h5 class="name">Library</h5>
+                        <span class="sub-title">Library Services</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="grid-item col-md-4 faculty admin">
+                    <figure>
+                      <img src="<?=ROOT?>/assets/images/aims.png" alt="">
+                      <figcaption class="fig-caption">
+                        <i class="fas fa-search"></i>
+                        <h5 class="name">Dorado</h5>
+                        <span class="sub-title">Payroll Account</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="grid-item col-md-4 faculty admin student">
+                    <figure>
+                      <img src="<?=ROOT?>/assets/images/website.png" alt="">
+                      <figcaption class="fig-caption">
+                        <i class="fas fa-search"></i>
+                        <h5 class="name">M365 Campus Mail</h5>
+                        <span class="sub-title">Microsoft365 Account</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="grid-item col-md-4 alumni student">
+                    <figure>
+                      <img src="<?=ROOT?>/assets/images/bgleftbottom.png" alt="">
+                      <figcaption class="fig-caption">
+                        <i class="fas fa-search"></i>
+                        <h5 class="name">Alumni Portal</h5>
+                        <span class="sub-title">Alumni services</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="grid-item col-md-4 student">
+                    <figure>
+                      <img src="<?=ROOT?>/assets/images/bg2.jpg" alt="">
+                      <figcaption class="fig-caption">
+                        <i class="fas fa-search"></i>
+                        <h5 class="name">Parents Portal</h5>
+                        <span class="sub-title">Parents Services Portal</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
