@@ -1,104 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LPU Portal</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThePORTLyceum - <?=$title?></title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="<?=ROOT?>/assets/css/general.css" rel="stylesheet" >
+  <!-------------- GOOGLE FONTS LINKS --------------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
-  </head>
-  <body class="bg-light">
-    <section class="bg-red header d-none d-md-block">
-      <div class="container-fluid">
-        <div class="row px-5 pt-3 pb-2">
-          <div class="col">
-            <div class="d-flex align-items-center justify-content-between">
-              <img src="<?=ROOT?>/assets/images/banner-desktop.png" class="mb-4" style="width: 40%;" />
-              <div>
-                <p class="mb-0 text-white w-75" style="text-align:end;font-size: 1.8rem;">
-                    Ahoy, <?=$username?>! Welcome to <br>
-                    <strong class="text-red text-xbold">The PORT</strong>!
-                </p>
-                <p class="intro-text text-white-med w-75 mb-4" style="text-align:right">
-                  A directory of online applications and services for the Lycean community.
-                </p>
-              </div>
+  <!-------------- FONTAWESOME CDN LINKS --------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  
+
+  <!-------------- BOOTSTRAP CDN LINKS --------------------->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+  <!-------------- .STYLE.CSS LINKS --------------------->
+  <link rel="stylesheet" href="<?=ROOT?>/assets/css/home.style.css">
+
+</head>
+<body>
+
+  <!-- NAVIGATION start -->
+  <main class="main">
+    <header class="header">
+      <div class="wrap d-flex">
+        <h1 class="logo">
+          <a href=""><img src="<?=ROOT?>/assets/images/logo.png" alt=""></a>
+        </h1>
+        <nav class="menu">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/About">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/Blog">Blog</a></li>
+            <li><a href="/Gallery">Gallery</a></li>
+            <li><a href="/Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="javascript:void(0);" class="sidemenu-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <div class="sidemenu">
+        <a href="javascript:void(0);" class="close"></a>
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <footer>
+          <div class="social">
+            <a href=""><img src="<?=ROOT?>/assets/images/facebook_16x16.png" alt=""></a>
+            <a href=""><img src="<?=ROOT?>/assets/images/instagram_16x16.png" alt=""></a>
+            <a href=""><img src="<?=ROOT?>/assets/images/twitter_16x16.png" alt=""></a>
+            <a href=""><img src="<?=ROOT?>/assets/images/youtube_16x16.png" alt=""></a>
+          </div>
+          <p>2023-2024 Manila, Lyceum of the Philippines University</p>
+          <p>Made by the ICT Applications Development Team</p>
+        </footer>
+      </div>
+    </header>
+  </main>
+
+    <!-- HERO SECTION start -->
+    <br><br><br><br><br>
+
+    <section class="home container text-white">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="hero-text">
+            <span class="title">Ahoy, Lyceans! Welcome to </span><br>
+            <span class="name"><strong>The PORT</strong></span><br>
+            <span class="designation">A directory of online applications and services for the Lycean community.</span>
+
+            <div class="social-icons d-flex">
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-youtube"></i></li>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="hero-img">
+            <div class="img-border">
+              <img src="<?=ROOT?>/assets/images/headerimg.png" class="img-fluid" alt="">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-transparent px-5 pb-2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group mt-4">
-                        <input type="text" placeholder="Searching for ..." title="Type in a name" class="quicksearch form-control form-control-sm"/>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="filters d-sm-none d-lg-block d-md-block d-none">
-                        <div class="mt-3 form-group  gx-1 button-group js-radio-button-group" data-filter-group="category">
-                          <button data-filter="*" class="button btn btn-danger mb-2" style="background-color: darkred" id="all">Show All</button>
+      <!-- SERVICES SECTION start -->
 
-                          <button data-filter=".student" class="button btn btn-outline-secondary mb-2" id="student">Student</button>
 
-                          <button data-filter=".faculty" class="button btn btn-outline-secondary mb-2" id="faculty">Alumni</button>
 
-                          <button data-filter=".staff" class="button btn btn-outline-secondary mb-2" id="staff">Faculty</button>
 
-                          <button data-filter=".parent" class="button btn btn-outline-secondary mb-2" id="parent">Parent</button>
 
-                          <button data-filter=".alumni" class="button btn btn-outline-secondary mb-2" id="alumni">Admin</button>
 
-                          <button data-filter=".admission" class="button btn btn-outline-secondary mb-2" id="admission">Library Services</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="bg-light px-5 pt-4 pb-5">
-        <div class="container-fluid">
-            <div class="grid row">
 
-            <?php
-              foreach($categories as $key) {
-                echo "<h4 class='text-semibold text-secondary'>".ucfirst($key)."</h4>";
-                foreach($services as $row) {
-                  echo "<div class='col-lg-2 col-md-4 col-sm-6  mb-4 category-item student' data-category='student'>
-                  <a href=".$row->url." target='_blank'>
-                    <div class='card h-100'>
-                      <div class='card-body p-3 d-flex flex-column justify-content-between'>
-                        <div>
-                            <img src='".ROOT."/assets/images/".$row->icon_location."' class='w-25'/>
-  
-                            <h6 class=' name mt-2 mb-1 text-semibold text-dkgold'><strong>".$row->name."</strong>
-                            </h6>
-                            <p class='mb-0 text-black'>".$row->description."
-                            </p>
-                        </div>
-  
-                        <small class='text-muted'>
-                            <i class='fas fa-tag'></i>
-                            &nbsp;".$row->category."
-                        </small>
-                      </div>
-                    </div>
-                  </a>
-                </div>";
-                }
-              }
-            ?>
-            <!-- loop through array from Services model
-          rendered as card widget using HTML and CSS styling -->
-            <?php
-              
-            ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $(".sidemenu-toggler").click(function(){
+        $(".sidemenu").addClass("active");
+      });
+
+      $(".close").click(function(){
+        $(".sidemenu").removeClass("active");
+      });
+
+      $(window).scroll(function(){
+        var sc = $(window).scrollTop();
+        if (sc > 120) {
+          $(".header").addClass("sticky");
+        } else {
+          $(".header").removeClass("sticky");
+        }
+      });
+    })
+  </script>
+</body>
 </html>

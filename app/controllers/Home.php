@@ -9,6 +9,7 @@ class Home {
     public function index() {
 
         $data = [];
+        $data['title'] = 'Home';
         $service = new Service;
         $category = new Category;
 
