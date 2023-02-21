@@ -10,6 +10,7 @@ class Home {
 
         $data = [];
         $data['title'] = 'The PORT';
+        
         $service = new Service;
         $category = new Category;
 
