@@ -83,7 +83,8 @@
           <div class="hero-text">
             <span class="title">Ahoy, Lyceans! Welcome to </span><br>
             <span class="name"><strong>The PORT</strong></span><br>
-            <span class="designation">A directory of online applications and services for the Lycean community.</span>
+            <span class="designation">The gateway to all online services for the Lycean community.</span>
+            <!-- <span class="designation">A directory of online applications and services for the Lycean community.</span> -->
 
             <div class="social-icons d-flex">
               <li><i class="fa-brands fa-facebook"></i></li>
@@ -142,127 +143,132 @@
                 </ul>
               </div>
 
-              <div class="row">
-                <div class="col-md-4 student">
-                  <a href="https://aims.lpu.edu.ph/lpumnl/students/" target="_blank" >
-                    <div class="single-service">
-                      <i class="fa fa-laptop"></i>
-                      <h2>AIMS Student Portal</h2>
-                      <p><strong style="font-weight:regular;">Student Access Module</strong><br>This module is exclusively for students only</p>
+              <div class="mh-service-gallery col-sm-12" id="service-gallery">
+                <div class="serviceContainer row" >
+
+                  <div class="col-md-4 student">
+                    <a href="https://aims.lpu.edu.ph/lpumnl/students/" target="_blank" >
+                      <div class="single-service">
+                        <i class="fa fa-user-ninja"></i><br>
+                        <h2>AIMS Student Portal</h2>
+                        <p><strong style="font-weight:regular;">Student Access Module</strong><br>This module is exclusively for students only</p>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- <?php foreach ($services as $service):?>
+                    <div class="col-md-4 parent">
+                      <div class="single-service">
+                        <i class="fa fa-laptop"></i>
+                        <h2><?=$service->name?></h2><br>
+                        <p><?=$service->description?></p>
+                      </div>
                     </div>
-                  </a>
-                </div>
-                <!-- <?php foreach ($services as $service):?>
+                  <?php endforeach;?> -->
                   <div class="col-md-4 parent">
                     <div class="single-service">
-                      <i class="fa fa-laptop"></i>
-                      <h2><?=$service->name?></h2>
-                      <p><?=$service->description?></p>
+                      <i class="fa fa-user-group"></i><br>
+                      <h2>AIMS Parent Portal</h2>
+                      <p>Parent Module</p>
                     </div>
                   </div>
-                <?php endforeach;?> -->
-                <div class="col-md-4 parent">
-                  <div class="single-service">
-                    <i class="fa fa-laptop"></i>
-                    <h2>AIMS Parent Portal</h2>
-                    <p>Parent Module</p>
+                  <div class="col-md-4 faculty">
+                    <div class="single-service">
+                      <i class="fa fa-chalkboard-user"></i><br>
+                      <h2>AIMS Faculty Portal</h2>
+                      <p>Faculty Management Module</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 faculty">
-                  <div class="single-service">
-                    <i class="fa fa-laptop"></i>
-                    <h2>AIMS Faculty Portal</h2>
-                    <p>Faculty Management Module</p>
+                  <div class="col-md-4 student">
+                    <div class="single-service">
+                      <i class="fa fa-laptop"></i><br>
+                      <h2>myLPU e-Learning Portal</h2>
+                      <p>Provides powerful tools to deliver engaging contents and activities for online learning.</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 student">
-                  <div class="single-service">
-                    <i class="fa fa-laptop"></i>
-                    <h2>myLPU e-Learning Portal</h2>
-                    <p>Provides powerful tools to deliver engaging contents and activities for online learning.</p>
+                  <div class="col-md-4 student faculty admin alumni">
+                    <div class="single-service">
+                      <i class="fa fa-laptop"></i><br>
+                      <h2>Campus Mail</h2>
+                      <p>Microsoft 365 account login</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 student faculty admin">
-                  <div class="single-service">
-                    <i class="fa fa-laptop"></i>
-                    <h2>Campus Mail</h2>
-                    <p>Microsoft 365 account login</p>
+                  <div class="col-md-4 faculty admin">
+                    <div class="single-service">
+                      <i class="fa fa-laptop"></i><br>
+                      <h2>Employee Portal</h2>
+                      <p>P&A Grant Thornton</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 faculty admin">
-                  <div class="single-service">
-                    <i class="fa fa-laptop"></i>
-                    <h2>Employee Portal</h2>
-                    <p>P&A Grant Thornton</p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                      <img src="<?=ROOT?>/assets/images/follett.png" alt="image-logo"><br>
+                      <h2>Online Public Access Catalog</h2>
+                      <p>Search for over 70,000 books, 5,000 CDs/DVDs, 1,000 periodical articles, 200 graduate theses and 600 eBooks within the library’s collection. </p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                    <img src="<?=ROOT?>/assets/images/follett.png" alt="image-logo">
-                    <h2>Online Public Access Catalog</h2>
-                    <p>Search for over 70,000 books, 5,000 CDs/DVDs, 1,000 periodical articles, 200 graduate theses and 600 eBooks within the library’s collection. </p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                      <img src="<?=ROOT?>/assets/images/science-direct.png" alt="image-logo"><br>
+                      <h2>ScienceDirect </h2>
+                      <p>Multi-disciplinary full-text scientific database offering journal articles and book chapters from nearly 2,500 journals and more than 30,000 book chapters.</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                    <img src="<?=ROOT?>/assets/images/science-direct.png" alt="image-logo">
-                    <h2>ScienceDirect </h2>
-                    <p>Multi-disciplinary full-text scientific database offering journal articles and book chapters from nearly 2,500 journals and more than 30,000 book chapters.</p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                      <img src="<?=ROOT?>/assets/images/emerald.jpeg" alt="image-logo"><br>
+                      <h2>Emerald Insight</h2>
+                      <p>Dedicated research platform for Emerald publications in Marketing; Public Policy and Environmental Management; and Tourism and Hospitality. </p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                    <img src="<?=ROOT?>/assets/images/emerald.jpeg" alt="image-logo">
-                    <h2>Emerald Insight</h2>
-                    <p>Dedicated research platform for Emerald publications in Marketing; Public Policy and Environmental Management; and Tourism and Hospitality. </p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                    <img src="<?=ROOT?>/assets/images/gale.png" alt="image-logo"><br>
+                      <h2>Gale Academic One File</h2>
+                      <p><strong>Academic OneFile</strong> has millions of peer-reviewed full-text multidisciplinary content in PDF and HTML.</p><br>
+                      <p><strong>Gale eBooks</strong> has encyclopedias and specialized reference sources for multidisciplinary research. </p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                  <img src="<?=ROOT?>/assets/images/gale.png" alt="image-logo">
-                    <h2>Gale Academic One File</h2>
-                    <p><strong>Academic OneFile</strong> has millions of peer-reviewed full-text multidisciplinary content in PDF and HTML.</p><br>
-                    <p><strong>Gale eBooks</strong> has encyclopedias and specialized reference sources for multidisciplinary research. </p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                      <img src="<?=ROOT?>/assets/images/mendeley.png" alt="image-logo"><br>
+                      <h2>Mendeley</h2>
+                      <p>A reference management tool that is used to manage citations (i.e. books, articles, and many more) which can be uploaded to the program and imported onto a Word document. </p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                    <img src="<?=ROOT?>/assets/images/mendeley.png" alt="image-logo">
-                    <h2>Mendeley</h2>
-                    <p>A reference management tool that is used to manage citations (i.e. books, articles, and many more) which can be uploaded to the program and imported onto a Word document. </p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                    <img src="<?=ROOT?>/assets/images/Scopus.png" alt="image-logo"><br>
+                      <h2>Scopus</h2>
+                      <p>The largest abstract and citation database of peer-reviewed literature: scientific journals, books and conference proceedings. </p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                  <img src="<?=ROOT?>/assets/images/Scopus.png" alt="image-logo">
-                    <h2>Scopus</h2>
-                    <p>The largest abstract and citation database of peer-reviewed literature: scientific journals, books and conference proceedings. </p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                      <i class="fa fa-laptop"></i><br>
+                      <h2>AORA</h2>
+                      <p><strong>Ask Online Reference Assistance</strong> Students may ask our virtual librarians their concerns about but not limited to library services, collection, and operations.  </p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                    <i class="fa fa-laptop"></i>
-                    <h2>AORA</h2>
-                    <p><strong>Ask Online Reference Assistance</strong> Students may ask our virtual librarians their concerns about but not limited to library services, collection, and operations.  </p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                      <i class="fa fa-laptop"></i><br>
+                      <h2>Thesis and Research Assistance</h2>
+                      <p>Have concerns regarding your thesis? Need to access our databases? How to use them? APA citation? Additional resources? Our communication channels are always open for your concerns! Simply leave us a message and your librarians will serve. </p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                    <i class="fa fa-laptop"></i>
-                    <h2>Thesis and Research Assistance </h2>
-                    <p>Have concerns regarding your thesis? Need to access our databases? How to use them? APA citation? Additional resources? Our communication channels are always open for your concerns! Simply leave us a message and your librarians will serve. </p>
-                  </div>
-                </div>
-                <div class="col-md-4 library">
-                  <div class="single-service">
-                    <i class="fa fa-laptop"></i>
-                    <h2>Virtual Help Desk</h2>
-                    <p>Need advise with your assignments, projects, lessons? No problem!  Students get the privilege of inviting a librarian to their study session via virtual communication channels. We will do our utmost to aid you in your needs. </p>
+                  <div class="col-md-4 library">
+                    <div class="single-service">
+                      <i class="fa fa-laptop"></i><br>
+                      <h2>Virtual Help Desk</h2>
+                      <p>Need advise with your assignments, projects, lessons? No problem!  Students get the privilege of inviting a librarian to their study session via virtual communication channels. We will do our utmost to aid you in your needs. </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="mh-service-gallery col-sm-12" id="service-gallery">
+              
+
+              <!-- <div class="mh-service-gallery col-sm-12" id="service-gallery">
                 <div class="serviceContainer row" >
                   <div class="grid-item col-md-4 student">
                     <figure>
@@ -331,7 +337,7 @@
                   </div>
 
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -344,6 +350,7 @@
 
 
   <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 
   <script>
     $(document).ready(function(){
@@ -363,7 +370,34 @@
           $(".header").removeClass("sticky");
         }
       });
-    })
+
+      $(window).on("load", function(){
+        var $container = $('.serviceContainer');
+        $container.isotope({
+          filter: '*',
+          animationOptions: {
+            queue: true
+          }
+        });
+
+        $('.services-nav li').click(function(){
+          $('.services-nav .current').removeClass('current');
+          $(this).addClass('current');
+          var selector = $(this).attr('data-filter');
+          $container.isotope({
+            filter: selector,
+            animationOptions: {
+              queue: true
+            }
+          });
+          return false;
+        });
+
+      });
+
+      $('#service-item').mixItUp();
+
+    });
   </script>
 </body>
 </html>
