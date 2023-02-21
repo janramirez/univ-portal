@@ -187,14 +187,14 @@
                   </div>
                   <div class="col-md-4 student faculty admin alumni">
                     <div class="single-service">
-                      <i class="fa fa-laptop"></i><br>
+                      <i class="fa fa-school"></i><br>
                       <h2>Campus Mail</h2>
                       <p>Microsoft 365 account login</p>
                     </div>
                   </div>
                   <div class="col-md-4 faculty admin">
                     <div class="single-service">
-                      <i class="fa fa-laptop"></i><br>
+                      <i class="fa fa-user-tie"></i><br>
                       <h2>Employee Portal</h2>
                       <p>P&A Grant Thornton</p>
                     </div>
@@ -244,21 +244,21 @@
                   </div>
                   <div class="col-md-4 library">
                     <div class="single-service">
-                      <i class="fa fa-laptop"></i><br>
+                      <i class="fa fa-earth-asia"></i><br>
                       <h2>AORA</h2>
                       <p><strong>Ask Online Reference Assistance</strong> Students may ask our virtual librarians their concerns about but not limited to library services, collection, and operations.  </p>
                     </div>
                   </div>
                   <div class="col-md-4 library">
                     <div class="single-service">
-                      <i class="fa fa-laptop"></i><br>
+                      <i class="fa fa-database"></i><br>
                       <h2>Thesis and Research Assistance</h2>
                       <p>Have concerns regarding your thesis? Need to access our databases? How to use them? APA citation? Additional resources? Our communication channels are always open for your concerns! Simply leave us a message and your librarians will serve. </p>
                     </div>
                   </div>
                   <div class="col-md-4 library">
                     <div class="single-service">
-                      <i class="fa fa-laptop"></i><br>
+                      <i class="fa fa-headset"></i><br>
                       <h2>Virtual Help Desk</h2>
                       <p>Need advise with your assignments, projects, lessons? No problem!  Students get the privilege of inviting a librarian to their study session via virtual communication channels. We will do our utmost to aid you in your needs. </p>
                     </div>
