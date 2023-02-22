@@ -119,25 +119,25 @@
             <div class="part col-sm-12">
               <div class="services-nav col-sm-12" id="filter-button">
                 <ul>
-                  <li data-filter="*" class="current">
+                  <li data-sort="random" data-filter="*" class="current">
                     <span>All Categories</span>
                   </li>
-                  <li data-filter=".student">
+                  <li data-sort="random" data-filter=".student">
                     <span>Student</span>
                   </li>
-                  <li data-filter=".alumni">
+                  <li data-sort="random" data-filter=".alumni">
                     <span>Alumni</span>
                   </li>
-                  <li data-filter=".parent">
+                  <li data-sort="random" data-filter=".parent">
                     <span>Parent</span>
                   </li>
-                  <li data-filter=".faculty">
+                  <li data-sort="random" data-filter=".faculty">
                     <span>Faculty</span>
                   </li>
-                  <li data-filter=".admin">
+                  <li data-sort="random" data-filter=".admin">
                     <span>Admin Staff</span>
                   </li>
-                  <li data-filter=".library">
+                  <li data-sort="random" data-filter=".library">
                     <span>ARC Online Resources</span>
                   </li>
                 </ul>
@@ -146,7 +146,7 @@
               <div class="mh-service-gallery col-sm-12" id="service-gallery">
                 <div class="serviceContainer row" >
 
-                  <div class="col-md-4 student">
+                  <div data-order="1" class="service-item col-md-4 student" id="service-item">
                     <a href="https://aims.lpu.edu.ph/lpumnl/students/" target="_blank" >
                       <div class="single-service">
                         <i class="fa fa-user-ninja"></i><br>
@@ -164,63 +164,63 @@
                       </div>
                     </div>
                   <?php endforeach;?> -->
-                  <div class="col-md-4 parent">
+                  <div data-order="2" class="service-item col-md-4 parent" id="service-item">
                     <div class="single-service">
                       <i class="fa fa-user-group"></i><br>
                       <h2>AIMS Parent Portal</h2>
                       <p>Parent Module</p>
                     </div>
                   </div>
-                  <div class="col-md-4 faculty">
+                  <div data-order="3" class="service-item col-md-4 faculty" id="service-item">
                     <div class="single-service">
                       <i class="fa fa-chalkboard-user"></i><br>
                       <h2>AIMS Faculty Portal</h2>
                       <p>Faculty Management Module</p>
                     </div>
                   </div>
-                  <div class="col-md-4 student">
+                  <div data-order="4" class="service-item col-md-4 student" id="service-item">
                     <div class="single-service">
                       <i class="fa fa-laptop"></i><br>
                       <h2>myLPU e-Learning Portal</h2>
                       <p>Provides powerful tools to deliver engaging contents and activities for online learning.</p>
                     </div>
                   </div>
-                  <div class="col-md-4 student faculty admin alumni">
+                  <div data-order="5" class="service-item col-md-4 student faculty admin alumni" id="service-item">
                     <div class="single-service">
                       <i class="fa fa-school"></i><br>
                       <h2>Campus Mail</h2>
                       <p>Microsoft 365 account login</p>
                     </div>
                   </div>
-                  <div class="col-md-4 faculty admin">
+                  <div data-order="6" class="service-item col-md-4 faculty admin" id="service-item">
                     <div class="single-service">
                       <i class="fa fa-user-tie"></i><br>
                       <h2>Employee Portal</h2>
                       <p>P&A Grant Thornton</p>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="7" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
                       <img src="<?=ROOT?>/assets/images/follett.png" alt="image-logo"><br>
                       <h2>Online Public Access Catalog</h2>
                       <p>Search for over 70,000 books, 5,000 CDs/DVDs, 1,000 periodical articles, 200 graduate theses and 600 eBooks within the library’s collection. </p>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="8" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
                       <img src="<?=ROOT?>/assets/images/science-direct.png" alt="image-logo"><br>
                       <h2>ScienceDirect </h2>
                       <p>Multi-disciplinary full-text scientific database offering journal articles and book chapters from nearly 2,500 journals and more than 30,000 book chapters.</p>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="9" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
                       <img src="<?=ROOT?>/assets/images/emerald.jpeg" alt="image-logo"><br>
                       <h2>Emerald Insight</h2>
                       <p>Dedicated research platform for Emerald publications in Marketing; Public Policy and Environmental Management; and Tourism and Hospitality. </p>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="10" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
                     <img src="<?=ROOT?>/assets/images/gale.png" alt="image-logo"><br>
                       <h2>Gale Academic One File</h2>
@@ -228,39 +228,41 @@
                       <p><strong>Gale eBooks</strong> has encyclopedias and specialized reference sources for multidisciplinary research. </p>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="11" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
                       <img src="<?=ROOT?>/assets/images/mendeley.png" alt="image-logo"><br>
                       <h2>Mendeley</h2>
                       <p>A reference management tool that is used to manage citations (i.e. books, articles, and many more) which can be uploaded to the program and imported onto a Word document. </p>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="12" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
                     <img src="<?=ROOT?>/assets/images/Scopus.png" alt="image-logo"><br>
                       <h2>Scopus</h2>
                       <p>The largest abstract and citation database of peer-reviewed literature: scientific journals, books and conference proceedings. </p>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="13" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
                       <i class="fa fa-earth-asia"></i><br>
                       <h2>AORA</h2>
-                      <p><strong>Ask Online Reference Assistance</strong> Students may ask our virtual librarians their concerns about but not limited to library services, collection, and operations.  </p>
+                      <p><strong>Ask Online Reference Assistance</strong><br>Students may ask our virtual librarians their concerns about but not limited to library services, collection, and operations.  </p>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="14" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
-                      <i class="fa fa-database"></i><br>
-                      <h2>Thesis and Research Assistance</h2>
-                      <p>Have concerns regarding your thesis? Need to access our databases? How to use them? APA citation? Additional resources? Our communication channels are always open for your concerns! Simply leave us a message and your librarians will serve. </p>
+                      <center>
+                        <i class="fa fa-database"></i><br>
+                        <h2>Thesis and Research Assistance</h2>
+                        <p style="text-align:justify;"><strong>Have concerns regarding your thesis?</strong> Need to access our databases? How to use them? APA citation? Additional resources? Our communication channels are always open for your concerns! Simply leave us a message and your librarians will serve. </p>
+                      </center>
                     </div>
                   </div>
-                  <div class="col-md-4 library">
+                  <div data-order="15" class="service-item col-md-4 library" id="service-item">
                     <div class="single-service">
                       <i class="fa fa-headset"></i><br>
                       <h2>Virtual Help Desk</h2>
-                      <p>Need advise with your assignments, projects, lessons? No problem!  Students get the privilege of inviting a librarian to their study session via virtual communication channels. We will do our utmost to aid you in your needs. </p>
+                      <p><strong>Need advise with your assignments, projects, lessons?</strong><br>No problem! Students get the privilege of inviting a librarian to their study session via virtual communication channels. We will do our utmost to aid you in your needs. </p>
                     </div>
                   </div>
                 </div>
@@ -352,7 +354,7 @@
   <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 
-  <script>
+  <script type="text/javascript">
     $(document).ready(function(){
       $(".sidemenu-toggler").click(function(){
         $(".sidemenu").addClass("active");
@@ -371,7 +373,8 @@
         }
       });
 
-      $(window).on("load", function(){
+      // on('load') --> slow, buggy, sometimes work, most of the time not
+      // $(window).on('load', function(){
         var $container = $('.serviceContainer');
         $container.isotope({
           filter: '*',
@@ -393,10 +396,9 @@
           return false;
         });
 
-      });
+      // });
 
-      $('#service-item').mixItUp();
-
+      
     });
   </script>
 </body>
