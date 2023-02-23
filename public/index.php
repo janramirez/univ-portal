@@ -5,7 +5,7 @@ session_start();
 /** Valid PHP Version **/
 $minPHPVersion = '8.0';
 if(phpVersion() < $minPHPVersion) {
-    die("Your PHP version must be {$minPHPVersion} or higher to run this app. Your current version is ".phpversion());
+    die("Your PHP version must be {$minPHPVersion} or higher to run this app. Your current version is " . phpversion());
 }
 
 /** Path to this file (index.php file) **/

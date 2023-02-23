@@ -122,234 +122,47 @@
                   <li data-sort="random" data-filter="*" class="current">
                     <span>All Categories</span>
                   </li>
-                  <li data-sort="random" data-filter=".student">
-                    <span>Student</span>
-                  </li>
-                  <li data-sort="random" data-filter=".alumni">
-                    <span>Alumni</span>
-                  </li>
-                  <li data-sort="random" data-filter=".parent">
-                    <span>Parent</span>
-                  </li>
-                  <li data-sort="random" data-filter=".faculty">
-                    <span>Faculty</span>
-                  </li>
-                  <li data-sort="random" data-filter=".admin">
-                    <span>Admin Staff</span>
-                  </li>
-                  <li data-sort="random" data-filter=".library">
-                    <span>ARC Online Resources</span>
-                  </li>
+                  <?php foreach ($data['category'] as $c): ?>
+                    <li data-filter=".<?= $c->Category ?>">
+                      <span>
+                        <?php if(ucfirst($c->Category) == 'Library') {
+                          echo "ARC Online Resources";
+                        } 
+                          echo ucfirst($c->Category);
+                        ?>
+                      </span>
+                    </li>
+                  <?php endforeach; ?>
                 </ul>
               </div>
 
               <div class="mh-service-gallery col-sm-12" id="service-gallery">
                 <div class="serviceContainer row" >
 
-                  <div data-order="1" class="service-item col-md-4 student" id="service-item">
-                    <a href="https://aims.lpu.edu.ph/lpumnl/students/" target="_blank" >
+                <?php foreach ($data['services'] as $s) :?>
+                  <div data-order="1" class="service-item col-md-4 <?= implode(" ", $s['categories']) ?>" id="service-item">
+                    <a href="<?=$s['url']?>" target="_blank" >
                       <div class="single-service">
-                        <i class="fa fa-user-ninja"></i><br>
-                        <h2>AIMS Student Portal</h2>
-                        <p><strong style="font-weight:regular;">Student Access Module</strong><br>This module is exclusively for students only</p>
+                        <?php if(!empty($s['image'])) {
+                           echo "<img src='" . ROOT . "/assets" . "/" . $s['image'] . "' alt='service-logo'><br>";
+                         } else 
+                         echo "<i class='fa fa-laptop'></i>";
+                        ?>
+                        <h2><?=$s['title']?></h2>
+                        <p><?= $s['description'] ?></p><br>
+                        <div class="tags" id="tags"><p>
+                          <i class="fa fa-tags" style="font-size:12px;"> <span><?= ucfirst(implode(" ", array_map('ucfirst',$s['categories']))) ?></span></i>
+                        </p></div>
                       </div>
                     </a>
                   </div>
-                  <!-- <?php foreach ($services as $service):?>
-                    <div class="col-md-4 parent">
-                      <div class="single-service">
-                        <i class="fa fa-laptop"></i>
-                        <h2><?=$service->name?></h2><br>
-                        <p><?=$service->description?></p>
-                      </div>
-                    </div>
-                  <?php endforeach;?> -->
-                  <div data-order="2" class="service-item col-md-4 parent" id="service-item">
-                    <div class="single-service">
-                      <i class="fa fa-user-group"></i><br>
-                      <h2>AIMS Parent Portal</h2>
-                      <p>Parent Module</p>
-                    </div>
-                  </div>
-                  <div data-order="3" class="service-item col-md-4 faculty" id="service-item">
-                    <div class="single-service">
-                      <i class="fa fa-chalkboard-user"></i><br>
-                      <h2>AIMS Faculty Portal</h2>
-                      <p>Faculty Management Module</p>
-                    </div>
-                  </div>
-                  <div data-order="4" class="service-item col-md-4 student" id="service-item">
-                    <div class="single-service">
-                      <i class="fa fa-laptop"></i><br>
-                      <h2>myLPU e-Learning Portal</h2>
-                      <p>Provides powerful tools to deliver engaging contents and activities for online learning.</p>
-                    </div>
-                  </div>
-                  <div data-order="5" class="service-item col-md-4 student faculty admin alumni" id="service-item">
-                    <div class="single-service">
-                      <i class="fa fa-school"></i><br>
-                      <h2>Campus Mail</h2>
-                      <p>Microsoft 365 account login</p>
-                    </div>
-                  </div>
-                  <div data-order="6" class="service-item col-md-4 faculty admin" id="service-item">
-                    <div class="single-service">
-                      <i class="fa fa-user-tie"></i><br>
-                      <h2>Employee Portal</h2>
-                      <p>P&A Grant Thornton</p>
-                    </div>
-                  </div>
-                  <div data-order="7" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                      <img src="<?=ROOT?>/assets/images/follett.png" alt="image-logo"><br>
-                      <h2>Online Public Access Catalog</h2>
-                      <p>Search for over 70,000 books, 5,000 CDs/DVDs, 1,000 periodical articles, 200 graduate theses and 600 eBooks within the library’s collection. </p>
-                    </div>
-                  </div>
-                  <div data-order="8" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                      <img src="<?=ROOT?>/assets/images/science-direct.png" alt="image-logo"><br>
-                      <h2>ScienceDirect </h2>
-                      <p>Multi-disciplinary full-text scientific database offering journal articles and book chapters from nearly 2,500 journals and more than 30,000 book chapters.</p>
-                    </div>
-                  </div>
-                  <div data-order="9" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                      <img src="<?=ROOT?>/assets/images/emerald.jpeg" alt="image-logo"><br>
-                      <h2>Emerald Insight</h2>
-                      <p>Dedicated research platform for Emerald publications in Marketing; Public Policy and Environmental Management; and Tourism and Hospitality. </p>
-                    </div>
-                  </div>
-                  <div data-order="10" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                    <img src="<?=ROOT?>/assets/images/gale.png" alt="image-logo"><br>
-                      <h2>Gale Academic One File</h2>
-                      <p><strong>Academic OneFile</strong> has millions of peer-reviewed full-text multidisciplinary content in PDF and HTML.</p><br>
-                      <p><strong>Gale eBooks</strong> has encyclopedias and specialized reference sources for multidisciplinary research. </p>
-                    </div>
-                  </div>
-                  <div data-order="11" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                      <img src="<?=ROOT?>/assets/images/mendeley.png" alt="image-logo"><br>
-                      <h2>Mendeley</h2>
-                      <p>A reference management tool that is used to manage citations (i.e. books, articles, and many more) which can be uploaded to the program and imported onto a Word document. </p>
-                    </div>
-                  </div>
-                  <div data-order="12" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                    <img src="<?=ROOT?>/assets/images/Scopus.png" alt="image-logo"><br>
-                      <h2>Scopus</h2>
-                      <p>The largest abstract and citation database of peer-reviewed literature: scientific journals, books and conference proceedings. </p>
-                    </div>
-                  </div>
-                  <div data-order="13" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                      <i class="fa fa-earth-asia"></i><br>
-                      <h2>AORA</h2>
-                      <p><strong>Ask Online Reference Assistance</strong><br>Students may ask our virtual librarians their concerns about but not limited to library services, collection, and operations.  </p>
-                    </div>
-                  </div>
-                  <div data-order="14" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                      <center>
-                        <i class="fa fa-database"></i><br>
-                        <h2>Thesis and Research Assistance</h2>
-                        <p style="text-align:justify;"><strong>Have concerns regarding your thesis?</strong> Need to access our databases? How to use them? APA citation? Additional resources? Our communication channels are always open for your concerns! Simply leave us a message and your librarians will serve. </p>
-                      </center>
-                    </div>
-                  </div>
-                  <div data-order="15" class="service-item col-md-4 library" id="service-item">
-                    <div class="single-service">
-                      <i class="fa fa-headset"></i><br>
-                      <h2>Virtual Help Desk</h2>
-                      <p><strong>Need advise with your assignments, projects, lessons?</strong><br>No problem! Students get the privilege of inviting a librarian to their study session via virtual communication channels. We will do our utmost to aid you in your needs. </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              
+                <?php endforeach; ?>
 
-              <!-- <div class="mh-service-gallery col-sm-12" id="service-gallery">
-                <div class="serviceContainer row" >
-                  <div class="grid-item col-md-4 student">
-                    <figure>
-                      <img src="<?=ROOT?>/assets/images/aims.png" alt="">
-                      <figcaption class="fig-caption">
-                        <i class="fas fa-search"></i>
-                        <h5 class="name">AIMS Portal</h5>
-                        <span class="sub-title">Student Portal</span>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <div class="grid-item col-md-4 library student">
-                    <figure>
-                      <img src="<?=ROOT?>/assets/images/aims.png" alt="">
-                      <figcaption class="fig-caption">
-                        <i class="fas fa-search"></i>
-                        <h5 class="name">Library</h5>
-                        <span class="sub-title">Library Services</span>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <div class="grid-item col-md-4 faculty admin">
-                    <figure>
-                      <img src="<?=ROOT?>/assets/images/aims.png" alt="">
-                      <figcaption class="fig-caption">
-                        <i class="fas fa-search"></i>
-                        <h5 class="name">Dorado</h5>
-                        <span class="sub-title">Payroll Account</span>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <div class="grid-item col-md-4 faculty admin student">
-                    <figure>
-                      <img src="<?=ROOT?>/assets/images/website.png" alt="">
-                      <figcaption class="fig-caption">
-                        <i class="fas fa-search"></i>
-                        <h5 class="name">M365 Campus Mail</h5>
-                        <span class="sub-title">Microsoft365 Account</span>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <div class="grid-item col-md-4 alumni student">
-                    <figure>
-                      <img src="<?=ROOT?>/assets/images/bgleftbottom.png" alt="">
-                      <figcaption class="fig-caption">
-                        <i class="fas fa-search"></i>
-                        <h5 class="name">Alumni Portal</h5>
-                        <span class="sub-title">Alumni services</span>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <div class="grid-item col-md-4 student">
-                    <figure>
-                      <img src="<?=ROOT?>/assets/images/bg2.jpg" alt="">
-                      <figcaption class="fig-caption">
-                        <i class="fas fa-search"></i>
-                        <h5 class="name">Parents Portal</h5>
-                        <span class="sub-title">Parents Services Portal</span>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                </div>
-              </div> -->
             </div>
           </div>
         </div>
       </section>
-
-
-
-
-
-
 
   <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>

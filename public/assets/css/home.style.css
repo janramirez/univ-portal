@@ -530,7 +530,7 @@ figure:hover figcaption {
 }
 
 .single-service {
-    text-align: left;
+    text-align: center;
     padding: 40px;
     margin-bottom: 30px;
     box-shadow: -5px 10px 10px -10px rgba(100, 100, 100, 0.35);
@@ -553,6 +553,7 @@ figure:hover figcaption {
     font-size: 70px;
     color: #bc1b22;
     margin-bottom: 10px;
+    
 }
 
 .single-service img {
@@ -563,7 +564,7 @@ figure:hover figcaption {
 .single-service h2 {
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: black;
 }
 
@@ -571,9 +572,25 @@ figure:hover figcaption {
     font-size: 16px;
     font-weight: 400;
     color: #838383;
+    text-align: left;
 }
 
 .single-service strong {
     color: #781f19;
     font-weight: 600;
+}
+
+.single-service .tags {
+    padding: 0;
+    margin: 0;
+}
+
+.single-service .tags i {
+    font-size: 13px;
+    color: rgba(139, 139, 139, 0.479);
+}
+
+.single-service .tags p span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
 }

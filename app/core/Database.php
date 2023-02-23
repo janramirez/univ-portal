@@ -5,9 +5,8 @@ Trait Database {
     private function connect() {
 
         $string = "mysql:hostname=".DBHOST.";dbname=".DBNAME;
-        $con = new PDO($string,DBUSER,DBPASS);
+        $con = new PDO($string,DBUSER,DBPASS,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
         return $con;
-
     }
 
     public function query($query, $data=[]) {

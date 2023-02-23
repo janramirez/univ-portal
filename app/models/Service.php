@@ -6,6 +6,8 @@ class Service
 
     protected $table = 'services';
 
+    public $res = [];
+
     protected $allowedColumns = [
 
         'name',

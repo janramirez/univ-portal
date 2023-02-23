@@ -25,8 +25,8 @@ if($_SERVER['SERVER_NAME'] == 'localhost') {
     define('ROOT', 'https://www.website.com');
 }
 
-define('APP_NAME',"My Website");
-define('APP_DESC', "A simple PHP framework that utilizes the MVC Structure");
+define('APP_NAME',"The PORT");
+define('APP_DESC', "The gateway to online services and applications for the Lycean Community.");
 
 /** true=show errors, false=hide errors**/
 define('DEBUG', true);

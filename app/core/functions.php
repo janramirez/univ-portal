@@ -1,18 +1,28 @@
 <?php
 
-function show($stuff) {
-
+function show($stuff)
+{
     echo "<pre>";
     print_r($stuff);    
     echo "</pre>";
-
 }
 
-function esc($str) {
+function esc($str)
+{
     return htmlspecialchars($str);
 }
 
-function redirect($path) {
+function redirect($path)
+{
     header("Location: " . ROOT . "/" . $path);
     die;
+}
+
+function dd($param) 
+{
+    echo "<pre>";
+    var_dump($param);
+    echo "</pre>";
+
+    die();
 }
