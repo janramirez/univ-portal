@@ -294,7 +294,7 @@ ul {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 0px;
-    box-shadow: -15px 15px 10px -7px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 15px 10px -7px rgba(0, 0, 0, 0.35);
 }
 
 @media screen and (max-width: 760px) {
@@ -569,7 +569,8 @@ figure:hover figcaption {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(184, 134, 11, 0.6);
+    /* border: 2px solid darkgoldenrod; */
 }
 
 .single-service:hover {
@@ -581,7 +582,6 @@ figure:hover figcaption {
     font-size: 70px;
     color: #bc1b22;
     margin-bottom: 10px;
-
 }
 
 .single-service img {
