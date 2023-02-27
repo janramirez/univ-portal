@@ -143,8 +143,10 @@
                   <div data-order="1" class="service-item col-md-4 <?= implode(" ", $s['categories']) ?>" id="service-item">
                     <a href="<?=$s['url']?>" target="_blank" >
                       <div class="single-service">
-                        <?php if(!empty($s['image'])) {
-                           echo "<img src='" . ROOT . "/assets" . "/" . $s['image'] . "' alt='service-logo'><br>";
+                        <?php if(($s['image'])) {
+                           if(!file_exists(ROOT."/assets"."/".$s['image'])) {
+                             echo "<img src='" . ROOT . "/assets" . "/" . $s['image'] . "' alt='service-logo'><br>";
+                           }
                          } else 
                          echo "<i class='fa fa-laptop'></i>";
                         ?>
