@@ -87,10 +87,10 @@
             <!-- <span class="designation">A directory of online applications and services for the Lycean community.</span> -->
 
             <div class="social-icons d-flex">
-              <li><i class="fa-brands fa-facebook"></i></li>
-              <li><i class="fa-brands fa-instagram"></i></li>
-              <li><i class="fa-brands fa-twitter"></i></li>
-              <li><i class="fa-brands fa-youtube"></i></li>
+              <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></a></i></li>
+              <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@
                         <h2><?=$s['title']?></h2>
                         <p><?= $s['description'] ?></p><br>
                         <div class="tags" id="tags"><p>
-                          <i class="fa fa-tags" style="font-size:12px;"> <span><?= ucfirst(implode(" ", array_map('ucfirst',$s['categories']))) ?></span></i>
+                          <i class="fa fa-tags" style="font-size:12px;"> <span><?= ucfirst(implode(", ", array_map('ucfirst',$s['categories']))) ?></span></i>
                         </p></div>
                       </div>
                     </a>
