@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   <title>LPU Manila - <?=$title?></title>
 
   <!-------------- GOOGLE FONTS LINKS --------------------->
@@ -37,9 +38,9 @@
         </h1>
         <nav class="menu">
           <ul>
-            <li><a href="<?=ROOT?>">Home</a></li>
-            <li><a href="<?=ROOT?>/Services">Services</a></li>
-            <li><a href="<?=ROOT?>/About">About</a></li>
+            <li><a href="javascript:void(0);" id="home">Home</a></li>
+            <li><a href="javascript:void(0);" id="services">Services</a></li>
+            <!-- <li><a href="#">About</a></li> -->
             <!-- <li><a href="/Blog">Blog</a></li>
             <li><a href="/Gallery">Gallery</a></li>
             <li><a href="/Contact">Contact</a></li> -->
@@ -55,17 +56,17 @@
         <a href="javascript:void(0);" class="close"></a>
         <nav>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="javascript:void(0);" id="home-side">Home</a></li>
+            <li><a href="javascript:void(0);" id="services-side">Services</a></li>
+            <!-- <li><a href="#">About</a></li> -->
           </ul>
         </nav>
         <footer>
           <div class="social">
-            <a href=""><img src="<?=ROOT?>/assets/images/facebook_16x16.png" alt=""></a>
-            <a href=""><img src="<?=ROOT?>/assets/images/instagram_16x16.png" alt=""></a>
-            <a href=""><img src="<?=ROOT?>/assets/images/twitter_16x16.png" alt=""></a>
-            <a href=""><img src="<?=ROOT?>/assets/images/youtube_16x16.png" alt=""></a>
+            <a href="https://www.facebook.com/LPUManila"><img src="<?=ROOT?>/assets/images/facebook_16x16.png" alt=""></a>
+            <a href="https://www.instagram.com/lpumanilaofficial/"><img src="<?=ROOT?>/assets/images/instagram_16x16.png" alt=""></a>
+            <a href="https://twitter.com/LPUManila"><img src="<?=ROOT?>/assets/images/twitter_16x16.png" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCKWOZikMw3Myzc1sLNzg6vQ"><img src="<?=ROOT?>/assets/images/youtube_16x16.png" alt=""></a>
           </div>
           <p>2023-2024 Manila, Lyceum of the Philippines University</p>
           <p>Made by the ICT Applications Development Team</p>
@@ -87,10 +88,10 @@
             <!-- <span class="designation">A directory of online applications and services for the Lycean community.</span> -->
 
             <div class="social-icons d-flex">
-              <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-              <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></a></i></li>
-              <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a href="https://www.facebook.com/LPUManila"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/lpumanilaofficial/"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://twitter.com/LPUManila"><i class="fa-brands fa-twitter"></a></i></li>
+              <li><a href="https://www.youtube.com/channel/UCKWOZikMw3Myzc1sLNzg6vQ"><i class="fa-brands fa-youtube"></i></a></li>
             </div>
           </div>
         </div>
@@ -177,6 +178,32 @@
 
       $(".close").click(function(){
         $(".sidemenu").removeClass("active");
+      });
+
+      $("#services").click(function(){
+        $('html,body').animate({
+          scrollTop: $(".mh-services").offset().top - 150
+        },500);
+      });
+      
+      $("#services-side").click(function(){
+        $(".sidemenu").removeClass("active");
+        $('html,body').animate({
+          scrollTop: $(".mh-services").offset().top
+        },500);
+      });
+
+      $("#home-side").click(function(){
+        $(".sidemenu").removeClass("active");
+        $('html,body').animate({
+          scrollTop: 0
+        },500);
+      });
+
+      $("#home").click(function(){
+        $('html,body').animate({
+          scrollTop: 0
+        },500);
       });
 
       $(window).scroll(function(){

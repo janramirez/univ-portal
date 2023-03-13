@@ -25,6 +25,7 @@ ul {
 
 body {
     background: white url(../images/bg2.jpg) no-repeat fixed center;
+    background-size: cover;
     height: 2000px;
     font-family: 'Oswald', sans-serif;
     color: black;
